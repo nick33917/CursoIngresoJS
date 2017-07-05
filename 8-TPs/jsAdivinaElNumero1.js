@@ -17,11 +17,8 @@ function comenzar()
     numSecreto = Math.floor(Math.random()*(101-1))+1 ;
    //para saber el numero y no ponerse a buscarlo//
     console.log(numSecreto) ;
+    contador = 0 ;
     
-	 
-	
-	
-
 }
 
 function verificar()
@@ -34,19 +31,17 @@ function verificar()
        alert("Gano en " + contador + " intentos") ;
     //para que el contador se ponga en 0 despues de ganar//      
        contador = 0 ;
-       
-
     } 
-   else if (numerousuario <numSecreto)
-   {
+   
+    else if (numerousuario < numSecreto)
+    {
       alert("falta...") ;
-   }
-   else
-   {
+    }
+    else
+    {
      alert("Se paso") ;
-   }
+    }
    
         
-
-   }
+}
 	
