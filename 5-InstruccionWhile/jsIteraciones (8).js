@@ -10,11 +10,11 @@ while(respuesta == true)//se podria poner while(confirm("..."))
 	{
 		numero = prompt("ingrese un numero") ;
 		numero = parseInt(numero) ;
-	while(isNaN(numero))
-			{
+	while(isNaN(numero))//lo pongo pero el ejercicio no lo pide(valida que sea un numero)//
+		{
 				numero = prompt("ingrese un numero") ;
 				numero = parseInt(numero) ;
-			}
+		}
 	if(numero>=0)
 		{	
 			acumuladorpositivo = acumuladorpositivo + numero ;
@@ -25,9 +25,9 @@ while(respuesta == true)//se podria poner while(confirm("..."))
 			acumuladornegativo = acumuladornegativo * numero ; 
 		}
 		
-	respuesta = confirm("Desea continuar") ;
+	    respuesta = confirm("Desea continuar") ;
 	}
-
+//lo mostrasmos en la pantalla //
 document.getElementById('suma').value = acumuladorpositivo;
 document.getElementById('producto').value = acumuladornegativo;
  
