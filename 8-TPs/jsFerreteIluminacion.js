@@ -22,19 +22,16 @@ function CalcularPrecio ()
         if(cantidad_lamparas>=6)
         {
             precio_descuento = (lamparas * cantidad_lamparas) * 0.50 ;
-            document.getElementById("precioDescuento").value = precio_descuento ;
         }
         else if(cantidad_lamparas==5)
         {
             if(marca=="ArgentinaLuz")
             {
                 precio_descuento = (lamparas * cantidad_lamparas) * 0.60 ;
-                document.getElementById("precioDescuento").value = precio_descuento ;
             }
             else 
             {
                 precio_descuento = (lamparas * cantidad_lamparas) * 0.70 ;
-                document.getElementById("precioDescuento").value = precio_descuento ;
             }
         }
         else if(cantidad_lamparas==4)
@@ -76,11 +73,12 @@ function CalcularPrecio ()
 // no esta correjido//
        if (precio_descuento >120)
         {
-                ingresos_brutos = (precio_descuento /100 *10)
+                ingresos_brutos = (precio_descuento /100 *10) ;
+                precio_descuento = precio_descuento + ingresos_brutos ;
                 alert("Usted pagó de Ingresos brutos $" +  ingresos_brutos + " , siendo  $" + precio_descuento + " El impuesto que se pagó.") ;
         }
 
 
-
- 	
+// se pone afuera porque los que superen 120 hay que sumarle el 10 //
+ 	document.getElementById("precioDescuento").value = precio_descuento ;
 }
