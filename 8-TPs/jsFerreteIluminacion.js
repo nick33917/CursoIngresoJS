@@ -15,7 +15,7 @@ function CalcularPrecio ()
     var cantidad_lamparas ;
     var precio_descuento ;
     var marca ;
-    var descuento_10 = 0 ;
+    var ingresos_brutos = 0 ;
     marca = document.getElementById("Marca").value ;
     cantidad_lamparas = document.getElementById("Cantidad").value ;
     cantidad_lamparas = parseInt(cantidad_lamparas) ;
@@ -76,12 +76,11 @@ function CalcularPrecio ()
 // no esta correjido//
        if (precio_descuento >120)
         {
-                precio_descuento = precio_descuento * 1.1 ;
-                descuento_10 = precio_descuento / 100 * 10 ;
-                alert("IIBB Usted pagó $" + precio_descuento + " , siendo  $"+ descuento_10 + " El impuesto que se pagó.")
+                ingresos_brutos = (precio_descuento /100 *10)
+                alert("Usted pagó de Ingresos brutos $" +  ingresos_brutos + " , siendo  $" + precio_descuento + " El impuesto que se pagó.") ;
         }
 
-//
+
 
  	
 }
