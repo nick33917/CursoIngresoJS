@@ -1,38 +1,55 @@
 function Mostrar()
 {
-	var numero ;
+	var numero ; 
 	var respuesta = true ;
-	var acumuladorNegativo = 0 ;
-	var acumuladorPositivo = 0 ;
-	var contador = 0 ;
-	
-	
-
-while(respuesta == true)  //Podria ir while(respuesta.tolowerCASE() == "si")
+	var acumulador_negativo = 0 ;
+	var acumulador_positivo = 0 ;
+	var contador_positivo = 0 ;
+	var contador_negativo = 0 ;
+	var contador_cero = 0 ;
+	var contador_pares = 0 ;
+	var prom_positivo = 0 ;
+	var prom_negativo = 0 ;
+	var dif_positivo_negativo = 0 ;
+	while(respuesta==true)
 	{
-		contador = contador +1 ;
-		numero = prompt("ingrese un numero") ;
+		numero = prompt("Ingrese un numero") ;
 		numero = parseInt(numero) ;
-	if(numero <0)
+
+		if(numero<0)
 		{
-			acumuladorNegativo = acumuladorNegativo + numero ;
+			acumulador_negativo = numero + acumulador_negativo ;
+			contador_negativo = contador_negativo +1 ;
+		}
+
+		else if(numero>0)
+		{
+			acumulador_positivo = numero + acumulador_positivo ;
+			contador_positivo = contador_positivo +1 ;
+		}
+
+		else
+		{
+			contador_cero = contador_cero +1 ;
 
 		}
-	else
-		{
-			acumuladorPositivo = acumuladorPositivo + numero ;
-		}
-		
-		acumuladorPositivo = acumuladorPositivo + contador ;
-		acumuladorNegativo = acumuladorNegativo 
 
-	} 
 
-	respuesta = confirm("Desea continuar") ;
+		respuesta = confirm("¿Quiere seguir ingresando un numero?")
+
 		
 
+	}
+	prom_positivo = acumulador_positivo / contador_positivo ;
+	prom_negativo = acumulador_negativo / contador_negativo ;
 	
+	dif_positivo_negativo = acumulador_positivo - acumulador_negativo ;
+
+
+
+		
 	
+}
 
 
 
