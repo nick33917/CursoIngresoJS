@@ -1,11 +1,15 @@
 function Mostrar()
 {
     var numero = prompt("Ingresar numero") ;
-    
-    for(contador_pares=0 ;contador_pares%2 ==0 ;contador_pares ++)
+    var contador_pares =0 ;
+    for(i=1;i<=numero ;i++)
     {
-        alert(contador_pares) ;
+        if(i%2==0)
+        {
+            contador_pares ++ ;
+        }
     }
+    alert(contador_pares) ;
 
 
 
