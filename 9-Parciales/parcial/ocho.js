@@ -14,15 +14,17 @@ function Mostrar()
     {
         numero=prompt("Ingrese un numero") ;
         numero=parseInt(numero) ;
-        acumulador_num = acumulador_num + numero ;
-        contador ++ ;
-        
         
         while(numero<0)
         {
             numero=prompt("Ingrese un numero valido") ;
-
+            numero = parseInt(numero) ;
         }
+        
+        acumulador_num = acumulador_num + numero ;
+        contador ++ ;
+        
+        
         if(numero%2 ==0)
         {
             contador_pares ++ ;
